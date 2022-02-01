@@ -11,9 +11,12 @@ import "./img/bg.jpg";
 
 
 const { getStores } = require("./api");
+const searchKeyword = document.getElementById('search');
+const submitBtn = document.getElementById('submit-btn');
+
 
 function getstore() {
-  getStores().then((data) => console.log(data));
+  /* getStores().then((data) => console.log(data)); */
   getStores().then((data) => {
     for (let i = 0; i < 14; i++) {
       if (data[i].isActive == 1) {
@@ -32,5 +35,14 @@ function getstore() {
   });
 }
 
+searchKeyword.addEventListener("keydown",(e)=>{
+  if((e.code)=="Enter"){
+    window.location=`./search.html?keyword=${searchKeyword.value}`;
+  }
+})
+
+submitBtn.addEventListener("click",()=>{
+  window.location=`./search.html?keyword=${searchKeyword.value}`;
+})
 
 getstore();

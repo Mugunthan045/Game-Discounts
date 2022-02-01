@@ -18,4 +18,20 @@ async function getStores() {
   return data;
 }
 
-export { deals, getStores };
+async function getSearchResult(searchKeyword) {
+  const games = "games?title=";
+  const limit = "&limit=40"
+  const response = await fetch(APIURL + games + searchKeyword + limit);
+  const result = await response.json();
+  return result;
+}
+
+async function getStoreIDForSearch(dealID){
+  const dealParam = "deals?id=";
+  const respone = await fetch(APIURL + dealParam+dealID)
+  const data = await respone.json()
+  return data;
+}
+
+
+export { deals, getStores, getSearchResult, getStoreIDForSearch };
