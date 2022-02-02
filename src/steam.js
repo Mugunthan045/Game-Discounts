@@ -9,12 +9,9 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const storeid = urlParams.get("storeid");
 
-const loader = document.querySelector(".loader");
-const titleRow = document.querySelector(".zero-row")
-async function currentDeals() {
-  titleRow.style.display='none';
-  loader.style.display= 'block';
-  await deals(storeid).then((data) => {
+function currentDeals() {
+  deals(storeid).then((data) => console.log(data));
+  deals(storeid).then((data) => {
     for (let i = 0; i < data.length; i++) {
       const storeID_1 = document.createElement("div");
       storeID_1.classList.add("game");
@@ -32,8 +29,6 @@ async function currentDeals() {
                 `;
       document.querySelector(".store-container").appendChild(storeID_1);
     }
-    loader.style.display= 'none';
-    titleRow.style.display='flex';
   });
 }
 

@@ -14,14 +14,10 @@ const { getStores } = require("./api");
 const searchKeyword = document.getElementById('search');
 const submitBtn = document.getElementById('submit-btn');
 
-const loader = document.querySelector(".loader");
 
-
-async function getstore() {
+function getstore() {
   /* getStores().then((data) => console.log(data)); */
- 
-  loader.style.display= 'block';
-  await getStores().then((data) => {
+  getStores().then((data) => {
     for (let i = 0; i < 14; i++) {
       if (data[i].isActive == 1) {
         console.log(data[i]);
@@ -35,8 +31,6 @@ async function getstore() {
 
         document.querySelector(".storelist-container").appendChild(store);
       }
-      loader.style.display= 'none';
-      
     }
   });
 }

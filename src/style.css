@@ -10,15 +10,6 @@ body {
     background-position: center center; */
 }
 
- h4{
-  color:white;
-  margin:auto;
-  width: 100%;
-  text-align: center;
-  font-size: 50px;
-  padding-bottom: 50px;
-}
-
 .game {
   width: 50%;
   float: left;
@@ -35,10 +26,6 @@ body {
 /* #gameico:hover{
     transform: scale(1.5);
 } */
-
-#gameico:hover{
-  cursor: default;
-}
 
 .store-container::after {
   content: "";
@@ -74,7 +61,7 @@ body {
   height: 30px;
   line-height: 30px;
   padding: 20px 0px;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 13px;
   clear: both;
   width: 100%;
@@ -84,7 +71,7 @@ body {
 
 .details2 .saleprice {
   float: right;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 
@@ -92,7 +79,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #B20041;
@@ -154,6 +141,7 @@ body {
   height: 20px;
   font-size: x-large;
   padding-left: 25px;
+  padding-bottom: 20px;
   padding-top: 10px;
 }
 
@@ -188,70 +176,4 @@ ul{
   display: inline-block;
   padding: 15px 20px;
   position: relative;
-}
-
-
-.loader {
-  margin: auto;
-  border: 5px solid #f3f3f3;
-  border-radius: 50%;
-  text-align: center;
-  margin-top: 15%;
-  z-index: 10;
-  border-top: 5px solid #B20041;
-  width: 30px;
-  height: 30px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.zero-row{
-  display: flex;
-  font-size: 10px;
-  font-family: inherit;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 40px;
-  z-index: 1;
-  margin:auto;
-  padding-bottom: 10px;
-
-}
-
-.zero-column{
-  display: flex;
-  z-index: 1;
-  background-color: #B20041;
-  flex: 49.8%;
-  border: 1px solid white;
-}
-
-.zero-column span{
-  font-size: 14px;
-  font-family: inherit;
-  color: white;
-}
-
-.zero-row .title{
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 20%;
-}
-
-.zero-column .price{
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 64%;
 }
