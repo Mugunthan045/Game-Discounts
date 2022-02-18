@@ -88,109 +88,6 @@ body {
 }
 
 
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  background-color: #B20041;
-  background-color: rgb(178, 0, 65, 0.9);
-  overflow-x: hidden;
-  transition: 0.2s;
-}
-
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: white;
-  display: block;
-  transition: 0.3s;
-}
-
-
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
-}
-
-.overlay .closebtn {
-  position: absolute;
-  top: 10px;
-  right: 35px;
-  font-size: 35px;
-}
-
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
-  }
-}
-
-.nav{
-  color: white;
-}
-.nav:hover{
-  color: #B20041
-}
-.lock-scroll {
-  overflow: visible;
-}
-
-.nav i{
-  widows: 100px;
-  height: 20px;
-  font-size: x-large;
-  padding-left: 25px;
-  padding-top: 10px;
-}
-
-
-.overlay-content a:after {    
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-.overlay-content a:hover:after { 
-  width: 100%; 
-  left: 0; 
-}
-
-ul{
-  list-style-type: none;
-}
-
-
-.overlay-content a {
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  
-  display: inline-block;
-  padding: 15px 20px;
-  position: relative;
-}
-
-
 .loader {
   margin: auto;
   border: 5px solid #f3f3f3;
@@ -254,4 +151,36 @@ ul{
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 64%;
+}
+
+.store_title  span{
+  color: white;
+  font-size: 34px;
+  padding: 15px;
+  width: 400px;
+  text-align: center;
+  margin-bottom: 25px;
+  border: 3px solid #B20041;
+  align-items: center;
+}
+
+.store_title{
+
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.fa-home{
+  z-index: 10;
+  color: white;
+  margin: 10px 15px 0 15px;
+  font-size:20px;
+}
+
+.fa-home:hover{
+  cursor: pointer;
+  color: #B20041;
 }

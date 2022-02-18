@@ -18,17 +18,15 @@ const loader = document.querySelector(".loader");
 
 
 async function getstore() {
-  /* getStores().then((data) => console.log(data)); */
  
   loader.style.display= 'block';
   await getStores().then((data) => {
     for (let i = 0; i < 14; i++) {
       if (data[i].isActive == 1) {
-        console.log(data[i]);
         var store = document.createElement("div");
         store.className = "store";
         store.innerHTML = `
-                <a href="./Steam.html?storeid=${data[i].storeID}">
+                <a href="./discount.html?storeid=${data[i].storeID}">
                 <img id="storeicon" src ="./img/${data[i].storeName}.png" />
                 </a>
                 `;

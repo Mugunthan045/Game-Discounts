@@ -6,11 +6,11 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const sKeyword = urlParams.get("keyword");
 
-const closebtn = document.querySelector(".closebtn");
-const nav = document.querySelector(".nav");
 
 const loader = document.querySelector(".loader");
 const titleRow = document.querySelector(".zero-row")
+
+const homeIco = document.querySelector(".fa-home");
 
 async function searchDeals() {
   titleRow.style.display='none';
@@ -37,17 +37,6 @@ async function searchDeals() {
     titleRow.style.display='flex';
   });
 }
-
-closebtn.addEventListener("click", closeNav);
-nav.addEventListener("click", openNav);
-
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
+homeIco.addEventListener("click", ()=>{window.location="/index.html"})
 searchDeals();
 getSearchResult();

@@ -6,7 +6,7 @@ module.exports = {
     mode: 'development',
     entry: {
         main: ['babel-polyfill', path.resolve(__dirname,'src/index.js')],
-        app_steam: ['babel-polyfill',path.resolve(__dirname,'src/steam.js')],
+        discount : ['babel-polyfill',path.resolve(__dirname,'src/discount.js')],
         search: ['babel-polyfill',path.resolve(__dirname,'src/search.js')]
     },
     output: {
@@ -56,14 +56,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
         title: 'F2P',
-        filename: 'Steam.html',
-        template: path.resolve(__dirname,'src/Steam.html'),
-        chunks: ['app_steam']
+        filename: 'discount.html',
+        template: path.resolve(__dirname,'src/discount.html'),
+        chunks: ['discount']
     }),
     new HtmlWebpackPlugin({
         title: 'F2P',
         filename: 'search.html',
-        template: path.resolve(__dirname,'src/Steam.html'),
+        template: path.resolve(__dirname,'src/discount.html'),
         chunks: ['search']
     })
 
